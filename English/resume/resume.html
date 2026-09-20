@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hao Wang - Professional Resume</title>
+<style>
+  /* Strict A4 page configuration with enhanced high-tech matrix background */
+  @page {
+    size: A4;
+    margin: 15mm 20mm;
+    background-color: #ffffff;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: #2d3748;
+    font-size: 11pt;
+    line-height: 1.4;
+    
+    /* Elegant High-Tech Geometric Wave Pattern Background */
+    background-color: #ffffff;
+    background-image: 
+      radial-gradient(#a3bffa 0.8px, transparent 0.8px), 
+      radial-gradient(#e2e8f0 0.8px, #ffffff 0.8px);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Top Vibrant Multi-Neon Gradient Bar */
+  .top-bar {
+    position: absolute;
+    top: -15mm;
+    left: -20mm;
+    width: 210mm;
+    height: 6px;
+    background: linear-gradient(90deg, #1a365d 0%, #667eea 35%, #764ba2 70%, #48bb78 100%);
+  }
+
+  /* Header Container with Absolute Layout for Photo */
+  .header-container {
+    position: relative;
+    width: 100%;
+    min-height: 28mm;
+    margin-bottom: 8px;
+    padding-bottom: 2px;
+  }
+
+  /* Profile Photo Frame with Radial Glow Effect (Top Left) */
+  .profile-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26mm;
+    height: 26mm;
+    border-radius: 50%;
+    border: 3px solid #667eea;
+    box-shadow: 0 10px 20px -3px rgba(102, 126, 234, 0.25), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    background-color: #f7fafc;
+    overflow: hidden;
+  }
+  .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Header Contact Text (Right Aligned) */
+  .header-text {
+    margin-left: 32mm;
+    text-align: right;
+  }
+  .header-name {
+    font-size: 24pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1a365d;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+  }
+  .header-contact {
+    font-size: 11pt;
+    color: #4a5568;
+    line-height: 1.35;
+  }
+  
+  /* Section Titles with Aurora Fading Underline */
+  .section-title {
+    font-size: 12pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1a365d;
+    /* Aurora Fade-out Border Style */
+    border-bottom: 2px solid;
+    border-image: linear-gradient(90deg, #667eea 0%, #a3bffa 50%, #e2e8f0 80%, transparent 100%) 1;
+    padding-bottom: 2px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    page-break-after: avoid;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  /* Decorative colorful icon square before title */
+  .section-title::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 11px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin-right: 8px;
+    border-radius: 1px;
+  }
+  
+  .objective-text {
+    text-align: justify;
+    margin-bottom: 2px;
+  }
+  
+  /* Tables for Clean Grid Structure */
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1px;
+    page-break-inside: avoid;
+  }
+  .info-left {
+    font-weight: bold;
+    text-align: left;
+    color: #2d3748;
+  }
+  .info-right {
+    text-align: right;
+    color: #667eea; /* Color matched dates */
+    font-weight: bold;
+    font-size: 10pt;
+  }
+  
+  .sub-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1px;
+  }
+  .sub-info-left {
+    font-style: italic;
+    color: #4a5568;
+  }
+  .sub-info-right {
+    text-align: right;
+    color: #718096;
+  }
+  
+  /* Bullet Lists */
+  .bullet-list {
+    margin: 1px 0 3px 0;
+    padding-left: 18px;
+  }
+  .bullet-list li {
+    margin-bottom: 2px;
+    text-align: justify;
+  }
+  
+  /* Grid Table for Technical Skills */
+  .skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2px;
+  }
+  .skills-label {
+    font-weight: bold;
+    width: 18%;
+    vertical-align: top;
+    padding-bottom: 2px;
+    color: #1a365d;
+  }
+  .skills-value {
+    width: 82%;
+    vertical-align: top;
+    padding-bottom: 2px;
+  }
+  
+  .references-text {
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+    color: #718096;
+    font-size: 10pt;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Top Radiant Gradient Line -->
+  <div class="top-bar"></div>
+
+  <!-- HEADER CONTAINER -->
+  <div class="header-container">
+    <div class="profile-photo">
+      <img src="wh.jpg" alt="Hao Wang Photo">
+    </div>
+    <div class="header-text">
+      <div class="header-name">Hao Wang</div>
+      <div class="header-contact">
+        Huxi Campus, Chongqing University, Chongqing, 401331<br>
+        Phone: (+86) 17830349208 | E-mail: 3254562422@qq.com
+      </div>
+    </div>
+  </div>
+
+  <!-- EMPLOYMENT OBJECTIVE -->
+  <div class="section-title">Employment Objective</div>
+  <div class="objective-text">
+    To obtain an entry-level full-stack software development position to build solid engineering foundations, with the long-term goal of mastering algorithm analysis and transitioning into a core algorithmic role.
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section-title">Education</div>
+  <table class="info-table">
+    <tr>
+      <td class="info-left">Bachelor of Science in Software Engineering</td>
+      <td class="info-right">Expected June 2028</td>
+    </tr>
+  </table>
+  <table class="sub-info-table">
+    <tr>
+      <td class="sub-info-left">Chongqing University, Chongqing</td>
+      <td class="sub-info-right">Chongqing, China</td>
+    </tr>
+  </table>
+
+  <!-- ACADEMIC HONORS -->
+  <div class="section-title">Academic Honors</div>
+  <ul class="bullet-list">
+    <li>Chongqing University Scholarship (Second-Class) — 2026</li>
+    <li>Chongqing University Outstanding League Cadet — 2026</li>
+    <li>Chongqing University Scholarship (Third-Class) — 2025</li>
+  </ul>
+
+  <!-- SELECTED COURSE WORK -->
+  <div class="section-title">Selected Course Work</div>
+  <div class="objective-text">
+    Data Structures and Algorithms, Computer Networks, Operating Systems, Computer Organization and Architecture.
+  </div>
+
+  <!-- TECHNICAL SKILLS -->
+  <div class="section-title">Technical Skills</div>
+  <table class="skills-table">
+    <tr>
+      <td class="skills-label">Languages:</td>
+      <td class="skills-value">Java (Swing GUI, MouseListener/ActionListener interfaces), C/C++, SQL</td>
+    </tr>
+    <tr>
+      <td class="skills-label">Database & ETL:</td>
+      <td class="skills-value">MySQL, TiDB, DBeaver, MySQL Workbench, Data Cleaning & Merging</td>
+    </tr>
+    <tr>
+      <td class="skills-label">Systems & Tools:</td>
+      <td class="skills-value">QEMU, GDB, EPOS Kernel, Linux Environments</td>
+    </tr>
+  </table>
+
+  <!-- PROJECT & EMPLOYMENT EXPERIENCE -->
+  <div class="section-title">Project & Employment Experience</div>
+  
+  <!-- Experience 1 -->
+  <table class="info-table">
+    <tr>
+      <td class="info-left">National Undergraduate Software Cup Competition</td>
+      <td class="info-right">May 2026 - June 2026</td>
+    </tr>
+  </table>
+  <table class="sub-info-table">
+    <tr>
+      <td class="sub-info-left">Frontend Developer</td>
+      <td class="sub-info-right">Chongqing</td>
+    </tr>
+  </table>
+  <ul class="bullet-list">
+    <li>Designed and implemented responsive web user interfaces utilizing modular components, ensuring an intuitive UX and optimal cross-device performance.</li>
+    <li>Collaborated with backend developers to establish smooth C/S management system architectures, handling event listeners and seamless asynchronous API integrations.</li>
+  </ul>
+
+  <!-- Experience 2 -->
+  <table class="info-table">
+    <tr>
+      <td class="info-left">National Undergraduate Service Outsourcing Competition</td>
+      <td class="info-right">April 2026 - May 2026</td>
+    </tr>
+  </table>
+  <table class="sub-info-table">
+    <tr>
+      <td class="sub-info-left">Mathematical Modeling Specialist</td>
+      <td class="sub-info-right">Chongqing</td>
+    </tr>
+  </table>
+  <ul class="bullet-list">
+    <li>Spearheaded the algorithmic and mathematical formulation for the team's project entry, aligning business logic with advanced analytical structures.</li>
+    <li>Developed data pre-processing pipelines to extract 12-dimensional features from multi-source complex datasets and applied normalization to mitigate skew.</li>
+  </ul>
+
+  <!-- Experience 3 -->
+  <table class="info-table">
+    <tr>
+      <td class="info-left">Off-Campus Educational Tutoring Center</td>
+      <td class="info-right">September 2025 - December 2025</td>
+    </tr>
+  </table>
+  <table class="sub-info-table">
+    <tr>
+      <td class="sub-info-left">Mathematics and Physics Tutor (Part-time)</td>
+      <td class="sub-info-right">Chongqing</td>
+    </tr>
+  </table>
+  <ul class="bullet-list">
+    <li>Delivered targeted lectures explaining complex mathematical proofs and core physical concepts like atomic energy levels, time dilation, and length contraction.</li>
+    <li>Analyzed student performance logs to isolate learning gaps, tailoring adaptive study guides and specialized practice matrices.</li>
+  </ul>
+
+  <!-- PROFESSIONAL INTERESTS -->
+  <div class="section-title">Professional Interests</div>
+  <div class="objective-text">
+    Interested in developing C/S mode management systems, exploring domestic competitions (e.g., Huawei Cup), and researching advanced topics in theoretical physics (e.g., atomic energy levels).
+  </div>
+
+  <!-- REFERENCES -->
+  <div class="references-text">
+    References will be furnished upon request.
+  </div>
+
+</body>
+</html>
